@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Duplicate Finder</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+
+<h1><center>Duplicate Finder Demo using pHash and/or machine learning<center></h1>
+
+<hr><p>
+
+<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            <h2>Upload Files</h2>
+            <h4>You can select multiple files and it will find possible duplicates from all files in database</h4>
+			<h5></h5>
+            
+			<input id="file-picker" type="file" name="file" accept="image/*" multiple>
+            <input type="submit" value="Upload!" id="upload-button">
+			
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+    
+
+   
+
+    <p>
+
+</form>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/uploadr.js') }}"></script>
+
+</body>
+</html>
